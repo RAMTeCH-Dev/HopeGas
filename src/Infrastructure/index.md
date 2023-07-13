@@ -1,15 +1,10 @@
----
-layout: page
-title: Infrastructure
----
-
 ## Overview
 
-Automation of ArcGIS configuration management operations such as initial deployments, upgrades, and disaster recovery improves operational excellence, security, and reliability of ArcGIS deployments. Leveraging IT automation tools provides a platform for automation of ArcGIS operations that follows the industry's best practices.
+Automation of ArcGIS configuration management operations such as initial deployments, upgrades, and disaster recovery improves operational excellence, security, and reliability of ArcGIS deployments. Leveraging IT automation tools provides a platform for automation of ArcGIS operations that follows the industry’s best practices.
 
 [Chef Infra](https://docs.chef.io/chef_overview/) 
 is a powerful automation platform that transforms infrastructure into code. 
-Whether you're operating in the cloud, on-premises, or in a hybrid environment, 
+Whether you’re operating in the cloud, on-premises, or in a hybrid environment, 
 Chef Infra automates how infrastructure is configured, deployed, and managed.
 
 [Chef cookbook](https://docs.chef.io/cookbooks/) 

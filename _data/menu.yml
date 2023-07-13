@@ -1,0 +1,12 @@
+# Important: all URLs must have a trailing slash!
+# https://github.com/christianspecht/code-examples/tree/master/jekyll-dynamic-menu
+- text: Hope Documentation
+  url: /
+- text: Infrastructure
+  url: /infrastructure/
+  subitems:
+    - text: QA
+      url: /infrastructure/qa/
+
+- text: Conversion
+  url: /conversion/

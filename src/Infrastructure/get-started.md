@@ -39,7 +39,7 @@ to the machine and extract the contents of the archive to C:\cinc.
 The archive contains ArcGIS-specific [Chef cookbooks](https://esri.github.io/arcgis-cookbook/cookbooks.html), 
 required third-party cookbooks, 
 and [deployment templates](https://esri.github.io/arcgis-cookbook/templates.html) for various ArcGIS configurations. 
-The deployment templates located in templates directory inside the archive provide template JSON files 
+The deployment templates located in ‘templates’ directory inside the archive provide template JSON files 
 for different machine roles, ArcGIS software versions, and platforms.
 
 #### Edit Role JSON Files
@@ -68,10 +68,10 @@ run cinc-client on the machine as administrator.
 Once all the Chef runs successfully complete, 
 save the JSON files in a safe and secure place to use in the future for upgrades or disaster recovery.
 
-The cinc-client reads attributes from the JSON files and caches the attributes inside a nodes folder 
+The cinc-client reads attributes from the JSON files and caches the attributes inside a ‘nodes’ folder 
 that resides in the Chef workspace directory. Because some of the attributes in the JSON file may contain sensitive 
 information, such as passwords, 
-it is recommended that you delete the nodes folder in the Chef workspace directory after you complete the last Chef run on the machine.
+it is recommended that you delete the ‘nodes’ folder in the Chef workspace directory after you complete the last Chef run on the machine.
 
 Chef Cookbooks for ArcGIS extract the setup archives into the local directory specified by arcgis.repository.setups attribute. 
 To save disk space, the archives and setups can be deleted after the machine configuration is completed.
