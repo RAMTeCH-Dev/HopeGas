@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Get Started | Hope Gas Documentation</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Get Started" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/infrastructure/get-started.html" />
+<meta property="og:url" content="http://localhost:4000/infrastructure/get-started.html" />
+<meta property="og:site_name" content="Hope Gas Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Get Started" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Get Started","url":"http://localhost:4000/infrastructure/get-started.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hope Gas Documentation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Hope Gas Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/infrastructure/">Infrastructure</a><a class="page-link" href="/conversion/">Conversion</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Get Started</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="get-started">Get Started</h2>
+
+<p>The common workflow to get started with Chef Cookbooks for ArcGIS was to use the Cinc Client in local mode.<br />
+This workflow included</p>
+<ul>
+  <li>Installing Cinc Client on Windows Server</li>
+  <li>Downloading Chef Cookbooks for ArcGIS in the appropriate locations</li>
+  <li>Placing the required ArcGIS Setup and supporting setup files in appropriate locations</li>
+  <li>Running Cinc Client in Local Mode</li>
+  <li>Cleaning Up</li>
+</ul>
+
+<h4 id="install-cinc-client">Install Cinc Client</h4>
+
+<p><a href="https://cinc.sh/">CINC</a> is a community distribution of the open source software of Chef Software Inc. 
+Cinc Client is a runtime for Chef cookbooks similar to Chef Infra Client. 
+Chef Cookbooks for ArcGIS support Cinc Client as well as Chef Infra Client.</p>
+
+<p>Cinc Client and all the required Chef cookbooks must be installed on each machine of the deployment.</p>
+
+<p>See <a href="https://esri.github.io/arcgis-cookbook/versions.html">cookbooks version compatibility</a> 
+page for the Cinc Client version recommended for specific ArcGIS software versions.</p>
+
+<h5 id="windows-setup">Windows Setup</h5>
+
+<p>To install the latest 16.x of Cinc Client, open a Windows PowerShell terminal as administrator and run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; . { iwr -useb https://omnitruck.cinc.sh/install.ps1 } | iex; install -version 16
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="download-chef-cookbooks-and-deployment-templates">Download Chef Cookbooks and Deployment Templates</h4>
+
+<p>Download <a href="https://github.com/Esri/arcgis-cookbook/releases/tag/v4.1.0">arcgis-4.1.0-cookbooks.zip</a> 
+from Chef Cookbooks for ArcGIS <a href="https://github.com/Esri/arcgis-cookbook/releases">releases</a> on GitHub 
+to the machine and extract the contents of the archive to C:\cinc.</p>
+
+<p>The archive contains ArcGIS-specific <a href="https://esri.github.io/arcgis-cookbook/cookbooks.html">Chef cookbooks</a>, 
+required third-party cookbooks, 
+and <a href="https://esri.github.io/arcgis-cookbook/templates.html">deployment templates</a> for various ArcGIS configurations. 
+The deployment templates located in templates directory inside the archive provide template JSON files 
+for different machine roles, ArcGIS software versions, and platforms.</p>
+
+<h4 id="edit-role-json-files">Edit Role JSON Files</h4>
+
+<p>Select a deployment template for the required ArcGIS subsystem, software version, and platform (Windows/Linux).</p>
+
+<p>All the role JSON files in the deployment templates contain a run_list array 
+that defines a list of recipes to run and attributes used by these recipes. 
+The recipes are specified as <cookbook name="">::<recipe name="">.</recipe></cookbook></p>
+
+<p>Follow the instructions for the specific deployment template and the machine role for the required changes 
+of attribute values.</p>
+
+<h4 id="run-cinc-client-in-local-mode">Run Cinc Client in Local Mode</h4>
+
+<p>To execute recipes specified in the run_list in a role JSON file, 
+run cinc-client on the machine as administrator.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cinc-client -z -j &lt;machine role JSON file path&gt; --config-option cookbook_path=C:\cinc\cookbooks
+</code></pre></div></div>
+
+<h4 id="clean-up">Clean Up</h4>
+
+<p>Once all the Chef runs successfully complete, 
+save the JSON files in a safe and secure place to use in the future for upgrades or disaster recovery.</p>
+
+<p>The cinc-client reads attributes from the JSON files and caches the attributes inside a nodes folder 
+that resides in the Chef workspace directory. Because some of the attributes in the JSON file may contain sensitive 
+information, such as passwords, 
+it is recommended that you delete the nodes folder in the Chef workspace directory after you complete the last Chef run on the machine.</p>
+
+<p>Chef Cookbooks for ArcGIS extract the setup archives into the local directory specified by arcgis.repository.setups attribute. 
+To save disk space, the archives and setups can be deleted after the machine configuration is completed.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Hope Gas Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Hope Gas Documentation</li><li><a class="u-email" href="mailto:jhershman@ramtech-corp.com">jhershman@ramtech-corp.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
