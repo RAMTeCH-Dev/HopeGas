@@ -18,12 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Chef Cookbooks for ArcGIS
+title: Hope Gas Documentation
 # email: support@esri.com
 description: >- # this means to ignore newlines until "baseurl:"
-  ArcGIS Chef cookbooks used to help simplify and automate ArcGIS installation and 
-  configuration using IT automation tool Chef.
-baseurl: "/arcgis-cookbook" # the subpath of your site, e.g. /blog
+  Project documentation
+baseurl: "/HopeGas" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

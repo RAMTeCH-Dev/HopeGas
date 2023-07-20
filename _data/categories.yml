@@ -2,16 +2,16 @@
   title: Overview
   sort: order
 
-- name: cookbooks
-  title: Chef Cookbooks
+- name: conversion
+  title: Data Conversion
   sort: item
 
-- name: templates
-  title: Deployment Templates
+- name: infrastructure
+  title: System Architecture
   sort: item
 
-- name: tutorials
-  title: Tutorials
+- name: requirements
+  title: Requirements
   sort: item
 
 - name: support
