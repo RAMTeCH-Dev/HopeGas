@@ -3,9 +3,8 @@ layout: default
 title: "Get Started"
 category: infrastructure
 item: get-started
-version: 4.1.0
 latest: true
-order: 2
+order: 3
 ---
 
 ## Get Started
