@@ -24,8 +24,11 @@ The following machines are included in the QA deployment:
 ## System Specifications
 
 ### wsvEsriPortq100.hopegas.loc
+
 #### Hardware 
 	- xx Core
+	
+	
 #### Apps and Features
  - IIS
  - Portal for ArcGIS - Version: 11.1
@@ -35,7 +38,10 @@ The following machines are included in the QA deployment:
  
 
 ### wsvEsriPortq200.hopegas.loc
+
 ### wsvEsriFedq100.hopegas.loc
+
 ### wsvEsriFedq200.hopegas.loc
+
 
 

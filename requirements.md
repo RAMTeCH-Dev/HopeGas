@@ -8,6 +8,5 @@ order: 4
 ---
 
 # About Functional Requirements
-
 Process description
 Put links to documents
