@@ -8,7 +8,7 @@
 
 - name: infrastructure
   title: System Architecture
-  sort: item
+  sort: order
 
 - name: requirements
   title: Functional Requirements
