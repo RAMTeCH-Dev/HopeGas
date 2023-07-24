@@ -1,0 +1,50 @@
+{
+    "arcgis": {
+        "version": "11.1",
+        "run_as_user": "hopegas\\ArcGIS_QA_Srvc$",
+		"run_as_password": "",
+		"run_as_msa": true,
+        "configure_windows_firewall": true,
+		"repository": {
+            "archives": "C:\\Software\\Archives",
+            "setups": "C:\\Software\\Setups"
+        },
+		"iis": {
+            "keystore_file": "C:\\Software\\Keystore\\esriwebq.hopegas.loc.pfx",
+            "keystore_password": "hopegas$99",
+            "replace_https_binding": true													
+        },
+        "server": {
+			"_comment": "the following urls are for WA",
+			"url": "https://wsvesrifedq100.hopegas.loc:6443/arcgis",
+			"wa_url": "https://wsvesriportq100.hopegas.loc/server",
+			"private_url": "https://wsvesrifedq100.hopegas.loc:6443/arcgis",
+			"web_context_url": "https://esriwebq.hopegas.loc/server",
+            "admin_username": "siteadmin",
+            "admin_password": "h0p3Admin99",
+            "wa_name": "server",
+			"root_cert": "C:\\Software\\Keystore\\wsvhopeca100-ca.cer",
+			"root_cert_alias": "wsvhopeca100-ca",
+			"is_hosting": false
+        },
+		"portal": {
+            "private_url": "https://wsvesriportq100.hopegas.loc:7443/arcgis",
+            "admin_username": "siteadmin",
+            "admin_password": "h0p3Admin99",
+			"keystore_file": "C:\\Software\\Keystore\\esriwebq.hopegas.loc.pfx",
+			"keystore_password": "hopegas$99"
+        },
+        "web_adaptor": {
+            "install_system_requirements": true,
+            "dotnet_setup_path": "C:\\Software\\Archives\\dotnet-hosting-6.0.9-win.exe",
+            "web_deploy_setup_path": "C:\\Software\\Archives\\WebDeploy_amd64_en-US.msi",
+            "admin_access": true
+        }
+    },
+    "run_list": [
+        "recipe[arcgis-enterprise::system]",
+        "recipe[esri-iis]",
+        "recipe[arcgis-enterprise::server_wa]",
+		"recipe[arcgis-enterprise::federation]"
+    ]
+}
